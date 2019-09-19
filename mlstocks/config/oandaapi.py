@@ -1,15 +1,6 @@
 from __future__ import print_function
-
-import os
-import sys
-
-import v20
-import yaml
-
-from mlstocks.common import input
-
 from .abstract import Config
-from .errors import ConfigPathError, ConfigValueError
+from .errors import ConfigValueError
 
 
 class Config_OandAAPI(Config):

@@ -5,7 +5,6 @@ import re
 from abc import ABCMeta, abstractmethod
 from importlib import import_module
 
-import six
 import yaml
 
 from .errors import ConfigPathError
@@ -85,7 +84,7 @@ class Config(object, metaclass=ABCMeta):
         try:
             with open(os.path.expanduser(path)) as f:
                 y = yaml.safe_load(f)
-                for k,v in y.items():
+                for k, v in y.items():
                     if v is None:
                         v = getattr(self, k)
                     setattr(self, k, v)
@@ -115,7 +114,7 @@ class Config(object, metaclass=ABCMeta):
         _class_name = _class_name.replace('-', '_')
         if re.match('^[0-9]', _class_name):
             _class_name = 'Config_' + _class_name
-            if not '.' in _class_name:
+            if '.' not in _class_name:
                 _module_name = _class_name.lower()
         return _module_name, _class_name
 

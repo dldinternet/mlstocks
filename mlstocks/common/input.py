@@ -16,6 +16,7 @@ def get_input(*args, **kwargs):
         raise
     return ret
 
+
 def get_string(prompt, default=None):
     prompt = "{}{}: ".format(
         prompt,
@@ -39,7 +40,6 @@ def get_string(prompt, default=None):
             pass
 
     return value
-
 
 
 def get_password(prompt):

@@ -1,8 +1,3 @@
-import sys
-
-from tabulate import tabulate
-
-
 def print_title(s):
     """
     Print a string as a title with a strong underline
