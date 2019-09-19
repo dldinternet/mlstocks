@@ -1,4 +1,5 @@
 from __future__ import print_function
+
 from .abstract import Config
 from .errors import ConfigValueError
 

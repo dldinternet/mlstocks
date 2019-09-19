@@ -1,7 +1,6 @@
 import argparse
 import datetime
 
-
 from mlstocks.common.args import date_time, instrument
 
 
