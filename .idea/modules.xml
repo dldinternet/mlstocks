@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Machine-Learning-for-Stock-Market---LiveEdu-master/Machine-Learning-for-Stock-Market---LiveEdu-master.iml" filepath="$PROJECT_DIR$/../Machine-Learning-for-Stock-Market---LiveEdu-master/Machine-Learning-for-Stock-Market---LiveEdu-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/mlstocks.iml" filepath="$PROJECT_DIR$/mlstocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../nameko/nameko.iml" filepath="$PROJECT_DIR$/../nameko/nameko.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oanda-api-v20/oanda-api-v20.iml" filepath="$PROJECT_DIR$/../oanda-api-v20/oanda-api-v20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../v20-python/v20-python.iml" filepath="$PROJECT_DIR$/../v20-python/v20-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../v20-python-samples/v20-python-samples.iml" filepath="$PROJECT_DIR$/../v20-python-samples/v20-python-samples.iml" />
     </modules>
   </component>
 </project>

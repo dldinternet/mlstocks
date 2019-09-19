@@ -1,0 +1,39 @@
+sudo: false
+language: python
+
+services:
+  - docker
+
+before_install:
+    # work around https://github.com/travis-ci/travis-ci/issues/7940
+    - sudo rm -f /etc/boto.cfg
+
+addons:
+  apt_packages:
+    - libenchant-dev
+
+install:
+  - pip install tox
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+matrix:
+  include:
+    - stage: static
+      python: 3.7
+      env: TOX_ENV=py37-static
+    - stage: static
+      python: 3.6
+      env: TOX_ENV=py36-static
+    - stage: test
+      python: 3.6
+      env: TOX_ENV=py36-lib
+    - stage: test
+      python: 3.6
+      env: TOX_ENV=py37-lib
+  fast_finish: true
+
+script:
+  - tox -e $TOX_ENV
