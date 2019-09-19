@@ -91,7 +91,7 @@ class TestCommonInput():
         global invocation_count
         invocation_count = 0
         with mock.patch('mlstocks.common.input.get_input', mock.MagicMock(side_effect=rv)):
-            assert input.get_string("prompt") is 'string'
+            assert input.get_string("prompt") == 'string'
 
     # === get_password
 
@@ -115,7 +115,7 @@ class TestCommonInput():
         invocation_count = 0
 
         with mock.patch('getpass.getpass', mock.MagicMock(side_effect=rv)):
-            assert input.get_password("prompt") is 'string'
+            assert input.get_password("prompt") == 'string'
 
     # === get_yn
 

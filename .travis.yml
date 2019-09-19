@@ -13,6 +13,7 @@ addons:
     - libenchant-dev
 
 install:
+  - pip install --upgrade pip
   - pip install tox
 
 cache:

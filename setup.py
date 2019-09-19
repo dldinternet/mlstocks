@@ -35,6 +35,7 @@ setup(
     ],
     extras_require={
         'dev': [
+            "pip",
             "mock>=1.2",
             "astroid>=2.2.5",
             "coverage>=4.5.1",

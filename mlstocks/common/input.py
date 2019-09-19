@@ -36,7 +36,7 @@ def get_string(prompt, default=None):
             sys.exit()
         except SystemExit:
             raise
-        except:
+        except BaseException:
             pass
 
     return value
@@ -56,7 +56,7 @@ def get_password(prompt):
             sys.exit()
         except SystemExit:
             raise
-        except:
+        except BaseException:
             pass
 
 
@@ -101,7 +101,7 @@ def get_yn(prompt, default=True):
             sys.exit()
         except SystemExit:
             raise
-        except:
+        except BaseException:
             pass
 
 
@@ -135,7 +135,7 @@ def get_from_list(choices, title, prompt, default=0):
             sys.exit()
         except SystemExit:
             raise
-        except:
+        except BaseException:
             pass
 
     return choice

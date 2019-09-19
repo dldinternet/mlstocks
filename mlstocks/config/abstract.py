@@ -88,7 +88,7 @@ class Config(object, metaclass=ABCMeta):
                     if v is None:
                         v = getattr(self, k)
                     setattr(self, k, v)
-        except:
+        except BaseException:
             raise ConfigPathError(path)
 
     NAMESPACE = '.'.join(__name__.split('.')[0:-1])
@@ -131,7 +131,7 @@ class Config(object, metaclass=ABCMeta):
                                   .format(Config._unsupported('Class ' + _class.__name__)))
 
             return _class
-        except ModuleNotFoundError as exc:
+        except ModuleNotFoundError:
             path = os.path.join(os.path.dirname(__file__), _module_name + '.py')
             if os.path.exists(path):
                 raise ImportError('{} exists but importing it failed!'
