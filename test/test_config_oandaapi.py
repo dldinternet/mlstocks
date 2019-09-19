@@ -110,7 +110,7 @@ active_account: None"""
             assert "Config is missing value for '{}'.".format(a) == str(cve)
 
 
-  def test_make(self, oanda_yaml):
+  def test_make_yaml(self, oanda_yaml):
     with mock.patch('yaml.load', return_value=oanda_yaml):
       with mock.patch('builtins.open', return_value=io.StringIO()):
         coaa = Config_OandAAPI.make('/path')
@@ -182,14 +182,14 @@ active_account: None"""
     Config_OandAAPI.manufacture('oandaapi.Config_OandAAPI')
 
 
-  def test_make(self):
+  def test_make_configpatherror(self):
     try:
       Config_OandAAPI.make('/path')
     except ConfigPathError as cpe:
       assert str(cpe) == "Config file '/path' could not be loaded."
 
-if __name__ == '__main__':
-  TestConfigOandAAPI().test_manufacture()
+# if __name__ == '__main__':
+#   TestConfigOandAAPI().test_manufacture()
   # TestConfigOandAAPI().test_dump({
   #   'hostname': 'hostname',
   #   'streaming_hostname': 'hostname',

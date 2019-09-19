@@ -42,5 +42,5 @@ class TestConfigAbstract():
     assert _module_name == 'config_123'
 
 
-if __name__ == '__main__':
-  TestConfigAbstract().test_get_module_class()
+# if __name__ == '__main__':
+#   TestConfigAbstract().test_get_module_class()

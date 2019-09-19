@@ -15,6 +15,6 @@ test -f .python-version && pyenv activate $(cat .python-version)
 
 rm -fr .pytest_cache test/__pycache__ 2>/dev/null
 BRANCH=0 coverage run -m pytest test --strict --timeout 30 -vv -o cache_dir=/tmp/cache
+echo "\$?==$?"
 BRANCH=0 coverage report
-
-echo Done
+echo "\$?==$?"
