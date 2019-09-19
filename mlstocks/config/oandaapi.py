@@ -5,7 +5,9 @@ import sys
 
 import v20
 import yaml
+
 from mlstocks.common import input
+
 from .abstract import Config
 from .errors import ConfigPathError, ConfigValueError
 

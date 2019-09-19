@@ -29,6 +29,9 @@ setup(
         "requests>=1.2.0",
         "six>=1.9.0",
         "tabulate",
+        "v20",
+        "oandapyV20",
+        "nameko",
     ],
     extras_require={
         'dev': [

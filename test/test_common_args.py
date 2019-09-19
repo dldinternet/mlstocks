@@ -1,9 +1,12 @@
 import argparse
 import datetime
-import mock
 import sys
+
+import mock
+
 from mlstocks.common import input
-from mlstocks.common.args import instrument, date_time
+from mlstocks.common.args import date_time, instrument
+
 
 class TestCommonArgs():
   def test_instrument(self):

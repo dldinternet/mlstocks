@@ -10,6 +10,7 @@ from pytest import fixture
 from mlstocks.config.errors import ConfigPathError, ConfigValueError
 from mlstocks.config.oandaapi import Config_OandAAPI
 
+
 @fixture
 def oanda_yaml():
   return {

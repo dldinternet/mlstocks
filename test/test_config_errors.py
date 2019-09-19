@@ -1,5 +1,6 @@
 from mlstocks.config.errors import ConfigPathError, ConfigValueError
 
+
 class TestConfigErrors():
 
 
@@ -17,5 +18,3 @@ class TestConfigErrors():
     except ConfigValueError as cve:
       assert cve.value == 'value'
       assert str(cve) == "Config is missing value for 'value'."
-
-

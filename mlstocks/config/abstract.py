@@ -1,12 +1,13 @@
 from __future__ import print_function
 
-from abc import ABCMeta, abstractmethod
 import os
 import re
+from abc import ABCMeta, abstractmethod
 from importlib import import_module
 
 import six
 import yaml
+
 from .errors import ConfigPathError
 
 
