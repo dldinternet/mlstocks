@@ -28,10 +28,10 @@ setup(
         "pyyaml>=5.1",
         "requests>=1.2.0",
         "six>=1.9.0",
-        "tabulate",
-        "v20",
-        "oandapyV20",
-        "nameko",
+        "tabulate==0.8.3",
+        "v20==3.0.25.0",
+        "oandapyV20==0.6.3",
+        "nameko==2.12.0",
     ],
     extras_require={
         'dev': [
@@ -50,7 +50,8 @@ setup(
             "requests==2.19.1",
             "urllib3==1.23",
             "websocket-client==0.48.0",
-            "tox"
+            "tox==3.14.0",
+            "bump2version"
         ],
     },
     entry_points={
